@@ -119,6 +119,9 @@ Run on multiple machines:
     parser.add_argument(
         "--machine-rank", type=int, default=0, help="the rank of this machine (unique per machine)"
     )
+    parser.add_argument(
+        "--ignore_warning", action="store_true", help="ignore warnings during training"
+    )
 
     # PyTorch still may leave orphan processes in multi-gpu training.
     # Therefore we use a deterministic way to obtain port,
